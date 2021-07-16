@@ -149,3 +149,31 @@ function doTraining() {
     train();
     alert("Entrenamiento completado!");
 }
+
+// =========  Creación de un ejemplo de entrenamiento =========
+// Una sola muestra de entrenamiento consiste en la salida de MobileNet después de pasar la 
+// imagen capturada desde la cámara web y la etiqueta de verdad de tierra proporcionada por 
+// el usuario:
+
+function addEjemplo(ejemplo, label) {
+    if (xs == null){
+        xs = tf.keep(ejemplo);
+    }else{
+        const oldX = xs;
+        xs = tf.keep(oldX.concat(ejemplo,0));
+        oldX.dispose();
+    }
+    labels.push(label);
+}
+
+// Esta función se llama cuando el usuario hace clic en uno de los botones de la etiqueta
+function handleButton(elem) {
+    // Obtiene la etiqueta por el id 
+    // del botón que el usuario ha pulsado
+    let label = elem.id;
+    console.log(label);
+    // Capturar una imagen de la webcam
+    const img = captura();
+    // Y pásala al modelo MobileNet, para luego guardar su resultado
+    addEjemplo(mobilenet.predict(img), label);
+}
