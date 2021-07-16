@@ -83,3 +83,69 @@ function captura() {
         return lotesImagen.toFloat().div(tf.scalar(127)).sub(tf.scalar(1));
     });
 }
+
+// =========== ==== Entrenamos el modelo ==== ============
+function encodeLabels(numClasses) {
+    for (let i = 0; i < labels.length; i++) {
+        const y = tf.tidy(
+            () => { return tf.oneHot(tf.tensor1d([labels[i]]), numClasses)});
+        
+        if (ys == null) {
+            // tf.keep() evita que un tf.Tensor generado dentro de 
+            // un tf.tidy() sea eliminado automáticamente
+            ys = tf.keep(y);
+        }else{
+            const oldY = ys;
+            ys = tf.keep(oldY.concat(y,0));
+            // tf.dispose() elimina cualquier tf.Tensors encontrado 
+            // dentro del objeto proporcionado
+            oldY.dispose();
+            y.dispose();
+        }
+        
+    }
+}
+
+async function train() {
+    ys = null;
+    // Codificar etiquetas como vectores OHE
+    encodeLabels(24);
+    model = tf.sequential({
+        layers: [
+            // Simplemente toma la salida de la última capa
+           // de nuestro modelo MobileNet truncado.
+           tf.layers.flatten({inputShape: mobilenet.outputs[0].shape.slice(1)}),
+            // A continuación, pasar el resultado a la capa densa - el "núcleo
+            // de nuestro segundo modelo de ajuste fino
+            tf.layers.dense({units: 100, activation: 'relu'}),
+            // La capa de salida nos da probabilidades para cada 
+            // de las clases de salida
+            tf.layers.dense({units: 10, activation: 'softmax'})
+        ]
+    });
+
+    // Compilar el modelo de ajuste fino usando el optimizador Adam 
+    // y la función de pérdida de entropía cruzada categórica
+    model.compile({optimizer: tf.train.adam(0.0001), loss: 'categoricalCrossentropy'});
+
+    let loss = 0;
+
+    // Entrenar el modelo durante 10 épocas e informar 
+    // el valor de la pérdida después de cada época
+    model.fit(xs,ys, {
+        epochs: 10,
+        callbacks: {
+            onBatchEnd: async (batch, logs) => {
+                loss = logs.loss.toFixed(5);
+                console.log('Perdida: '+loss);
+            }
+        }
+    });
+
+}
+
+// La función es llamada cuando el usuario presiona el boton entrenar
+function doTraining() {
+    train();
+    alert("Entrenamiento completado!");
+}
