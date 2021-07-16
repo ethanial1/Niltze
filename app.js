@@ -37,3 +37,14 @@ async function setup() {
         }
     });
 }
+
+// Descargar y preparar el modelo MobileNet
+// El modelo base utilizado en este ejemplo es MobileNet 
+// con una anchura de 0,25 y un tamaño de imagen de entrada de 224 X 224
+
+async function cargarMobilenet() {
+    const mobileNetModel = await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_1.0_224/model.json');
+    // Elige una capa convolucional de profundidad intermedia
+    const layer = mobileNetModel.getLayer('conv_pw_13_relu');
+    mobilenet = tf.model({inputs: mobileNetModel.inputs, outputs: layer.output});
+}
