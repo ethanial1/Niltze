@@ -177,3 +177,25 @@ function handleButton(elem) {
     // Y pásala al modelo MobileNet, para luego guardar su resultado
     addEjemplo(mobilenet.predict(img), label);
 }
+
+// ========== Proceso de inferencia ============
+// Proceso de reconocimiento de letras
+async function predecir() {
+    while (isPredicting) {
+        const predecirClass = tf.tidy(() => {
+            const img = captura();
+            const activation = mobilenet.predict(img);
+            const prediction = model.predict(activation);
+            return prediction.as1D().argMax();
+        });
+
+        document.getElementById("prediction").innerText = (await predecirClass.data())[0];
+        predecirClass.dispose();
+        await tf.nextFrame();
+    }
+}
+
+function setPredicting(predicting) {
+    isPredicting = predicting;
+    predecir();
+}
