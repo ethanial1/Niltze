@@ -199,3 +199,15 @@ function setPredicting(predicting) {
     isPredicting = predicting;
     predecir();
 }
+
+// =============== Función auxiliar =============
+function saveModel() {
+    model.save('downloads://my_model');
+}
+
+async function init() {
+    await setup();
+    await cargarMobilenet();
+}
+
+init();
