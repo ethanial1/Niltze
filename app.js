@@ -145,7 +145,11 @@ async function train() {
 }
 
 // La función es llamada cuando el usuario presiona el boton entrenar
+// Se hace el entremaniento con las imágenes que el usuario ha capturado
+// Una vez que el usuario ha presionado el boton de cada letra, se tienen fotos sobre las letras
+// DoTrainig es la función que llama a train.
 function doTraining() {
+    alert("Entrenando");
     train();
     alert("Entrenamiento completado!");
 }
@@ -188,7 +192,7 @@ async function predecir() {
             const prediction = model.predict(activation);
             return prediction.as1D().argMax();
         });
-
+        console.log((await predecirClass.data())[0]);
         document.getElementById("prediction").innerText = (await predecirClass.data())[0];
         predecirClass.dispose();
         await tf.nextFrame();

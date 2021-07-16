@@ -8,7 +8,7 @@
 </head>
 <body>
     <video autoplay playsinline muted id="camera" width="224" height="224"></video>
-    <img src="Assets/lenguaje.jpeg" width="300" alt="" srcset="">
+    <img src="assets/lenguaje.jpeg" width="300" alt="" srcset="">
     <button type="button" id="A" class="btn btn-outline-primary" onclick="handleButton(this)">A</button>
     <button type="button" id="B" class="btn btn-outline-primary" onclick="handleButton(this)">B</button>
     <button type="button" id="C" class="btn btn-outline-primary" onclick="handleButton(this)">C</button>
@@ -30,6 +30,9 @@
     <button type="button" id="V" class="btn btn-outline-primary" onclick="handleButton(this)">V</button>
     <button type="button" id="W" class="btn btn-outline-primary" onclick="handleButton(this)">W</button>
     <button type="button" id="Y" class="btn btn-outline-primary" onclick="handleButton(this)">Y</button>
+    <br>
+    <button type="button" id="W" class="btn btn-outline-primary" onclick="doTraining()">Entrenar</button>
+    <button type="button" id="Y" class="btn btn-outline-primary" onclick="setPredicting(true)">Comenzar Predicción</button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest" crossorigin="anonymous"></script>
 <script src="app.js"></script>
