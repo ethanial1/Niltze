@@ -3,8 +3,28 @@ let net;
 const webcamElement = document.getElementById('webcam');
 const classifier = knnClassifier.create();
 
-async function app() {
+// array del alfabeto
+let alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","U","V","W","X","Y","Z"];
+
+// =========== ==== INICIACIÓN DE LA CÁMARA Y EL MODELO MOBILENET ==== ==========
+// ajustamos el tamaño de la cámara
+function ajustarVideo(width, height) {
+    const aspectRatio = width / height;
+    if(width >= height){
+        webcamElement.width = aspectRatio * webcamElement.height;
+    }else if(width < height){
+        webcamElement.height = webcamElement.width / aspectRatio;
+    }
+}
+
+
+// Descargamos y preparamos el modelo MobileNet
+async function cargarModelo() {
     console.log('Cargando modelo...');
+}
+
+async function app() {
+    
 
     // Cargar el modelo
     net = await mobilenet.load();
