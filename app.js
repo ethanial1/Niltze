@@ -88,7 +88,7 @@ function captura() {
 function encodeLabels(numClasses) {
     for (let i = 0; i < labels.length; i++) {
         const y = tf.tidy(
-            () => { return tf.oneHot(tf.tensor1d([labels[i]]), numClasses)});
+            () => { return tf.oneHot(tf.tensor1d([labels[i]]).toString(), numClasses)});
         
         if (ys == null) {
             // tf.keep() evita que un tf.Tensor generado dentro de 
@@ -149,7 +149,6 @@ async function train() {
 // Una vez que el usuario ha presionado el boton de cada letra, se tienen fotos sobre las letras
 // DoTrainig es la función que llama a train.
 function doTraining() {
-    alert("Entrenando");
     train();
     alert("Entrenamiento completado!");
 }
