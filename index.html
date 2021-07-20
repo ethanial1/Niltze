@@ -7,15 +7,16 @@
     <title>Dama</title>
 </head>
 <body>
-    <video autoplay playsinline muted id="camera" width="224" height="224"></video>
+    <div id="console"></div>
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
     <img src="assets/lenguaje.jpeg" width="300" alt="" srcset="">
-    <button type="button" id="A" class="btn btn-outline-primary" onclick="handleButton(this)">A</button>
-    <button type="button" id="B" class="btn btn-outline-primary" onclick="handleButton(this)">B</button>
-    <button type="button" id="C" class="btn btn-outline-primary" onclick="handleButton(this)">C</button>
-    <button type="button" id="D" class="btn btn-outline-primary" onclick="handleButton(this)">D</button>
-    <button type="button" id="E" class="btn btn-outline-primary" onclick="handleButton(this)">E</button>
-    <button type="button" id="F" class="btn btn-outline-primary" onclick="handleButton(this)">F</button>
-    <button type="button" id="G" class="btn btn-outline-primary" onclick="handleButton(this)">G</button>
+    <button type="button" id="A" class="btn btn-outline-primary" onclick="addEjemplo(0)">A</button>
+    <button type="button" id="B" class="btn btn-outline-primary" onclick="addEjemplo(1)">B</button>
+    <button type="button" id="C" class="btn btn-outline-primary" onclick="addEjemplo(2)">C</button>
+    <button type="button" id="D" class="btn btn-outline-primary" onclick="addEjemplo(3)">D</button>
+    <button type="button" id="E" class="btn btn-outline-primary" onclick="addEjemplo(4)">E</button>
+    <button type="button" id="F" class="btn btn-outline-primary" onclick="addEjemplo(5)">F</button>
+    <button type="button" id="G" class="btn btn-outline-primary" onclick="addEjemplo(6)">G</button>
     <button type="button" id="H" class="btn btn-outline-primary" onclick="handleButton(this)">H</button>
     <button type="button" id="I" class="btn btn-outline-primary" onclick="handleButton(this)">I</button>
     <button type="button" id="L" class="btn btn-outline-primary" onclick="handleButton(this)">L</button>
@@ -31,9 +32,15 @@
     <button type="button" id="W" class="btn btn-outline-primary" onclick="handleButton(this)">W</button>
     <button type="button" id="Y" class="btn btn-outline-primary" onclick="handleButton(this)">Y</button>
     <br>
-    <button type="button" id="W" class="btn btn-outline-primary" onclick="doTraining()">Entrenar</button>
-    <button type="button" id="Y" class="btn btn-outline-primary" onclick="setPredicting(true)">Comenzar Predicción</button>
+    <button type="button" id="W" class="btn btn-outline-primary" onclick="setPredicting(false)">Stop</button>
+    <button type="button" id="Y" class="btn btn-outline-primary" onclick="setPredicting(true)">Start</button>
+
+    <div id="respuesta"></div>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+    <script src="example.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest" crossorigin="anonymous"></script>
-<script src="app.js"></script>
+
 </html>
