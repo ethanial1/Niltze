@@ -1,5 +1,5 @@
 const Finger = {
-    Thum: 0,
+    Thumb: 0,
     Index: 1,
     Middle: 2,
     Ring: 3,

@@ -3,7 +3,7 @@ import { Finger } from "./FingerDescription";
 export default class GestureDescription {
   constructor(name) {
 
-    // name (should be unique)
+    // Nombre (debe de ser único)
     this.name = name;
 
     this.curls = {};
