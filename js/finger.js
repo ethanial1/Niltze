@@ -12,8 +12,9 @@ const landmarkColors = {
 };
 
 const gestureStrings = {
-    'thumbs_up': '👍',
-    'vicory': '✌🏻'
+    //'thumbs_up': '👍',
+    //'vicory': '✌🏻',
+    'letra_a': 'A'
 };
 
 async function main() {
@@ -27,8 +28,9 @@ async function main() {
     // Configurar la estimación de los gestos
     // añadimos nuestros gestos
     const knownGestures = [
-        fp.Gestures.VictoryGesture,
-        fp.Gestures.ThumbsUpGesture
+        //fp.Gestures.VictoryGesture,
+        //fp.Gestures.ThumbsUpGesture
+        Gestures.letraADescription
     ];
 
     const GE = new fp.GestureEstimator(knownGestures);
