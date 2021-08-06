@@ -14,9 +14,12 @@ const landmarkColors = {
 };
 
 const gestureStrings = {
+    'letra_a': 'A',
+    'letra_b': 'B',
+    'letra_c': 'C',
     'thumbs_up': '👍',
     //'vicory': '✌🏻',
-    //'letra_a': 'A'
+    
 };
 
 async function main() {
@@ -32,6 +35,9 @@ async function main() {
     const knownGestures = [
         //fp.Gestures.VictoryGesture,
         //fp.Gestures.ThumbsUpGesture
+        Gestures.letraADescription,
+        Gestures.letraBDescription,
+        Gestures.letraCDescription,
         Gestures.thumbsUpDescription
         
     ];
@@ -71,6 +77,7 @@ async function main() {
                 });
 
                 resultLayer.innerText = gestureStrings[result.name];
+                console.log(gestureStrings[result.name]);
             }
         }
 
