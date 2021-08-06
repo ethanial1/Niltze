@@ -1,5 +1,5 @@
-import {Finger, FingerCurl, FingerDirection} from '../FingerDescription'
-import GestureDescription from '../GestureDescription';
+import {Finger, FingerCurl, FingerDirection} from '../FingerDescription.js'
+import GestureDescription from '../GestureDescription.js';
 
 // describe es gesto de la letra A
 const letraADescription = new GestureDescription('letra_a');

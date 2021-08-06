@@ -1,9 +1,9 @@
-import GestureEstimator from "./GestureEstimator";
-import GestureDescription from "./GestureDescription";
-import { Finger, FingerCurl, FingerDirection } from "./FingerDescription";
-import * as Gestures from './gestures';
+import GestureEstimator from "./GestureEstimator.js";
+import GestureDescription from "./GestureDescription.js";
+import { Finger, FingerCurl, FingerDirection } from "./FingerDescription.js";
+import * as Gestures from './gestures/index.js';
 
-export default {
+export {
     GestureEstimator, GestureDescription, 
     Finger, FingerCurl, FingerDirection, 
     Gestures

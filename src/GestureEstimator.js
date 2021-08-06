@@ -1,5 +1,5 @@
-import FingerPoseEstimator from "./FingerPoseEstimator";
-import { Finger, FingerCurl, FingerDirection } from "./FingerDescription";
+import FingerPoseEstimator from "./FingerPoseEstimator.js";
+import { Finger, FingerCurl, FingerDirection } from "./FingerDescription.js";
 
 export default class GestureEstimator {
 

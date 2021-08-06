@@ -1,3 +1,5 @@
+import {Gestures} from './src/index.js';
+
 const config = {
     video : {width: 640, height: 480, fps: 30}
 };
@@ -12,9 +14,9 @@ const landmarkColors = {
 };
 
 const gestureStrings = {
-    //'thumbs_up': '👍',
+    'thumbs_up': '👍',
     //'vicory': '✌🏻',
-    'letra_a': 'A'
+    //'letra_a': 'A'
 };
 
 async function main() {
@@ -30,7 +32,8 @@ async function main() {
     const knownGestures = [
         //fp.Gestures.VictoryGesture,
         //fp.Gestures.ThumbsUpGesture
-        Gestures.letraADescription
+        Gestures.thumbsUpDescription
+        
     ];
 
     const GE = new fp.GestureEstimator(knownGestures);

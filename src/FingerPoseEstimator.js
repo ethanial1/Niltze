@@ -1,4 +1,4 @@
-import { Finger, FingerCurl, FingerDirection } from "./FingerDescription";
+import { Finger, FingerCurl, FingerDirection } from "./FingerDescription.js";
 
 export default class FingerPoseEstimator {
     constructor(options) {
