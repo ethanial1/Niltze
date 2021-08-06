@@ -17,6 +17,7 @@ const gestureStrings = {
     'letra_a': 'A',
     'letra_b': 'B',
     'letra_c': 'C',
+    'letra_d': 'D',
     'thumbs_up': '👍',
     //'vicory': '✌🏻',
     
@@ -38,6 +39,7 @@ async function main() {
         Gestures.letraADescription,
         Gestures.letraBDescription,
         Gestures.letraCDescription,
+        Gestures.letraDDescription,
         Gestures.thumbsUpDescription
         
     ];
