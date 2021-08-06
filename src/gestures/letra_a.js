@@ -10,9 +10,8 @@ const letraADescription = new GestureDescription('letra_a');
 // - vertical arriba (mejor) o diagonal arriba izquierda / derecha
 
 letraADescription.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
+letraADescription.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
 letraADescription.addDirection(Finger.Thumb, FingerDirection.VerticalUp, 1.0);
-letraADescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 0.25);
-letraADescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.25);
 
 
 // Todos los demas dedos
@@ -20,8 +19,9 @@ letraADescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.
 // - vertical 
 
 for(let finger of [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    letraADescription.addCurl(finger, FingerCurl.HalfCurl, 0.5);
-    letraADescription.addDirection(finger, FingerDirection.VerticalDown, 1.0);
+    letraADescription.addCurl(finger, FingerCurl.HalfCurl, 1.0);
+    letraADescription.addCurl(finger, FingerCurl.FullCurl, 1.0);
+    letraADescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
 }
 
 export default letraADescription;

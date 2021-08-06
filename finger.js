@@ -18,6 +18,16 @@ const gestureStrings = {
     'letra_b': 'B',
     'letra_c': 'C',
     'letra_d': 'D',
+    'letra_e': 'E',
+    'letra_f': 'F',
+    'letra_g': 'G',
+    'letra_h': 'H',
+    'letra_i': 'I',
+    // j
+    // K
+    'letra_l': 'L',
+    'letra_m': 'M',
+    'letra_n': 'N',
     'thumbs_up': '👍',
     //'vicory': '✌🏻',
     
@@ -40,6 +50,16 @@ async function main() {
         Gestures.letraBDescription,
         Gestures.letraCDescription,
         Gestures.letraDDescription,
+        Gestures.letraEDescription,
+        Gestures.letraFDescription,
+        Gestures.letraGDescription,
+        Gestures.letraHDescription,
+        Gestures.letraIDescripction,
+        // J
+        // K
+        Gestures.letraLDescription,
+        Gestures.letraMDescription,
+        Gestures.letraNDescription,
         Gestures.thumbsUpDescription
         
     ];

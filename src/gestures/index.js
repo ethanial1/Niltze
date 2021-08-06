@@ -7,7 +7,11 @@ import letraFDescription from "./letra_f.js";
 import letraGDescription from './letra_g.js';
 import letraHDescription from './letra_h.js';
 import letraIDescripction from "./letra_i.js";
-
+//j
+// K
+import letraLDescription from "./letra_l.js";
+import letraMDescription from "./letra_m.js";
+import letraNDescription from "./letra_n.js";
 import thumbsUpDescription from "./prueba.js";
 
 export {
@@ -20,5 +24,10 @@ export {
     letraGDescription,
     letraHDescription,
     letraIDescripction,
+    // j
+    // K
+    letraLDescription,
+    letraMDescription,
+    letraNDescription,
     thumbsUpDescription
 }
