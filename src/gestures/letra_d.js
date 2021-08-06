@@ -13,15 +13,15 @@ const letraDDescription = new GestureDescription('letra_d');
 
 letraDDescription.addCurl(Finger.Index, FingerCurl.NoCurl, 1.0);
 letraDDescription.addDirection(Finger.Index, FingerDirection.VerticalUp, 1.0);
-letraDDescription.addDirection(Finger.Index, FingerDirection.DiagonalUpRight,0.25);
-letraDDescription.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.25);
+letraDDescription.addDirection(Finger.Index, FingerDirection.DiagonalUpRight,0.35);
+letraDDescription.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.35);
 
 // Describimos los demas dedos (medio, anillo, meñique)
 // - Están doblados
 // - Verticales hacia arriba
 for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
     letraDDescription.addCurl(finger, FingerCurl.HalfCurl, 1.0);
-    letraDDescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
+    letraDDescription.addDirection(finger, FingerDirection.VerticalDown, 1.0);
     letraDDescription.addDirection(finger, FingerDirection.DiagonalUpLeft, 0.25);
     letraDDescription.addDirection(finger, FingerDirection.DiagonalUpRight, 0.25);
 }
@@ -29,8 +29,8 @@ for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
 // Describimos el dedo Pulgar
 // - Esta doblado
 // Puede apuntar de forma horizontal derecha o izquierda
-letraDDescription.addCurl(Finger.Thumb, FingerCurl.FullCurl, 0.75);
-letraDDescription.addCurl(Finger.Thumb,FingerCurl.HalfCurl, 0.50);
+letraDDescription.addCurl(Finger.Thumb, FingerCurl.FullCurl, 0.5);
+letraDDescription.addCurl(Finger.Thumb,FingerCurl.HalfCurl, 0.5);
 letraDDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 1.0);
 letraDDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 1.0);
 letraDDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownRight, 0.25);
