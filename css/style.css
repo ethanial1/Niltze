@@ -6,6 +6,7 @@
 
 body{
     font-family: 'PT Sans', sans-serif;
+    text-align: center;
 }
 
 /* Header*/
@@ -71,7 +72,17 @@ header{
     height: 100px;
 }
 
-/* Mapa*/
+/* Mapa en movimiento */
+.nave_espacila .imagen_nave{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
 /* 
 html, body {
     width: 100%;
