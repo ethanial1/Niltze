@@ -28,6 +28,18 @@ const gestureStrings = {
     'letra_l': 'L',
     'letra_m': 'M',
     'letra_n': 'N',
+    'letra_o': 'O',
+    'letra_p': 'P',
+    // q
+    'letra_r': 'R',
+    'letra_s': 'S',
+    'letra_t': 'T',
+    'letra_u': 'U',
+    'letra_v': 'V',
+    'letra_w': 'W',
+    // x
+    'letra_y': 'Y',
+    // z
     'thumbs_up': '👍',
     //'vicory': '✌🏻',
     
