@@ -8,6 +8,7 @@ const Finger = {
     // declaración por conveniencia
     all : [0,1,2,3,4],
 
+    // Nombre de los dedos
     nameMapping: {
         0: 'pulgar',
         1: 'indice',
@@ -28,7 +29,7 @@ const Finger = {
         [13-16] Ring
         [17-20] Meñique
     */
-
+    // Armado de la mano
     pointsMapping : {
         0: [[0, 1], [1, 2], [2, 3], [3, 4]],
         1: [[0, 5], [5, 6], [6, 7], [7, 8]],
@@ -44,6 +45,7 @@ const Finger = {
     getPoints: function(value) {
         return (typeof this.pointsMapping[value] !== undefined) ? this.pointsMapping[value] : false;
     },
+    
 };
 
 // Dedos dobaldos
@@ -58,11 +60,14 @@ const FingerCurl = {
         3: 'Full curl'
     },
 
+    
     getName: function(value) {
         return (typeof this.nameMapping[value] !== undefined) ? this.nameMapping[value] : false;
     },
+
 };
 
+// Dirección de los dedos
 const FingerDirection = {
     VerticalUp: 0,
     VerticalDown: 1,

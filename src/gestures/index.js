@@ -12,6 +12,10 @@ import letraIDescripction from "./letra_i.js";
 import letraLDescription from "./letra_l.js";
 import letraMDescription from "./letra_m.js";
 import letraNDescription from "./letra_n.js";
+import letraODescription from "./letra_o.js";
+import letraPDescription from "./letra_p.js";
+import letraRDescription from "./letra_r.js";
+
 import thumbsUpDescription from "./prueba.js";
 
 export {
@@ -29,5 +33,10 @@ export {
     letraLDescription,
     letraMDescription,
     letraNDescription,
+    letraODescription,
+    letraPDescription,
+    //q
+    letraRDescription,
+    
     thumbsUpDescription
 }

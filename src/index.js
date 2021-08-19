@@ -1,10 +1,11 @@
-import GestureEstimator from "./GestureEstimator.js";
+//import GestureEstimator from "./GestureEstimator.js";
 import GestureDescription from "./GestureDescription.js";
 import { Finger, FingerCurl, FingerDirection } from "./FingerDescription.js";
 import * as Gestures from './gestures/index.js';
 
 export {
-    GestureEstimator, GestureDescription, 
+    //GestureEstimator, 
+    GestureDescription, 
     Finger, FingerCurl, FingerDirection, 
     Gestures
 };

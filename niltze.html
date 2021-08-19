@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
     <title>Niltze</title>
 </head>
@@ -15,7 +17,7 @@
             <div class="logo">Niltze</div>
             <ul class="menu">
                 <li><a href="">Home</a></li>
-                <li><a href="views/braille.html">Proyectos</a></li>
+                <li><a href="view.html">LSM</a></li>
                 <li><a href="">Nosotros</a></li>
             </ul>
         </nav>
@@ -30,18 +32,34 @@
         </div>
 
     </header>
-    <section id="information">
-        <div class="proyectos-info">
-            <div class="">
-                <h3>Braille</h3><br>
-                <p>Ayudamos a comunicar a las personas que no pueden usar su voz</p>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Niltze
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  Niltze es una comunidad de amigos, ayudamos a personas con discapacidad.
+                </div>
             </div>
         </div>
-    </section>
-    <div class="scrol">
-
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+                Lenguaje de Señas Mexicano LSM 
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  El lenguaje de señas mexicano ayuda a las personas con discapacidad.
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/home.js"></script>
     <script src="js/particles.js"></script>

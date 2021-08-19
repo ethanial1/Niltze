@@ -11,10 +11,11 @@ export default class FingerPoseEstimator {
             DISTANCE_VOTE_POWER: 1.1,
             SINGLE_ANGLE_VOTE_POWER: 0.9,
             TOTAL_ANGLE_VOTE_POWER: 1.6
-        }, ...options};
+        },...options};
     }
 
     estimate(landmarks) {
+        console.log('Finger pose estimator');
         // paso 1: calcular la pendiente
         let slopesXY = [];
         let slopesYZ = [];

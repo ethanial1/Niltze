@@ -1,5 +1,3 @@
-import { Finger } from "./FingerDescription.js";
-
 export default class GestureDescription {
   constructor(name) {
 
