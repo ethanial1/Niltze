@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
 }
 
 body{
-    font-family: 'PT Sans', sans-serif;
     text-align: center;
     background: #000;
+}
+.nav-bar{
+    height: 100px;
 }
 
 /* *Vista de video - Camara Braille */
@@ -42,4 +45,20 @@ body{
     width: 100%;
     position: fixed;
     z-index: -1;
+}
+
+.texto-div{
+    padding: 30px;
+    margin: 50px;
+}
+
+.texto-div input{
+    padding: 9px;
+    font-size: 18px;
+    border: solid 1px #aaa;
+    width: 60%;
+}
+
+input[type="button"]{
+    width: 35%;
 }

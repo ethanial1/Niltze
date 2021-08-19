@@ -1,4 +1,5 @@
 import {Gestures} from './src/index.js';
+var resultado = '';
 
 const config = {
     video : {width: 640, height: 480, fps: 30}
@@ -125,7 +126,13 @@ async function main() {
                 });
 
                 resultLayer.innerText = gestureStrings[result.name];
-                console.log(gestureStrings[result.name]);
+                resultado += gestureStrings[result.name];
+                if(gestureStrings[result.name] == '👍'){
+                    decir(resultado);
+                    resultado = '';
+                }
+                //console.log(gestureStrings[result.name]);
+
             }
         }
 
@@ -166,6 +173,11 @@ function drawPoint(ctx, x, y, r, color){
     ctx.arc(x,y,r,0,2 * Math.PI);
     ctx.fillStyle = color;
     ctx.fill();
+}
+
+// Funcion para decir la palabra formada por el usuario
+function decir(texto){
+    speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
 }
 
 window.addEventListener("DOMContentLoaded", () => {
