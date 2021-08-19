@@ -15,7 +15,14 @@ import letraNDescription from "./letra_n.js";
 import letraODescription from "./letra_o.js";
 import letraPDescription from "./letra_p.js";
 import letraRDescription from "./letra_r.js";
-
+import letraSDescription from "./letra_s.js";
+import letraTDescription from "./letra_t.js";
+import letraUDescription from "./letra_u.js";
+import letraVDescription from "./letra_v.js";
+import letraWDescripcion from "./letra_w.js";
+// X
+import letraYDescription from "./letra_y.js";
+// Z
 import thumbsUpDescription from "./prueba.js";
 
 export {
@@ -33,10 +40,18 @@ export {
     letraLDescription,
     letraMDescription,
     letraNDescription,
+    // Ñ
     letraODescription,
     letraPDescription,
     //q
     letraRDescription,
-    
+    letraSDescription,
+    letraTDescription,
+    letraUDescription,
+    letraVDescription,
+    letraWDescripcion,
+    // x
+    letraYDescription,
+    // z
     thumbsUpDescription
 }
