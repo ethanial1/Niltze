@@ -4,6 +4,7 @@ const config = {
     video : {width: 640, height: 480, fps: 30}
 };
 
+// Representan los puntos
 const landmarkColors = {
     thumb: 'red',
     indexFinger: 'blue',
@@ -72,6 +73,19 @@ async function main() {
         Gestures.letraLDescription,
         Gestures.letraMDescription,
         Gestures.letraNDescription,
+        // Ñ
+        Gestures.letraODescription,
+        Gestures.letraPDescription,
+        // q
+        Gestures.letraRDescription,
+        Gestures.letraSDescription,
+        Gestures.letraTDescription,
+        Gestures.letraUDescription,
+        Gestures.letraVDescription,
+        Gestures.letraWDescripcion,
+        // x
+        Gestures.letraYDescription,
+        // z
         Gestures.thumbsUpDescription
         
     ];
