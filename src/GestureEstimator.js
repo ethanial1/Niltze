@@ -7,7 +7,7 @@ export default class GestureEstimator {
   
       this.estimator = new FingerPoseEstimator(estimatorOptions);
   
-      // list of predefined gestures
+      // lista de gestos predefinidos
       this.gestures = knownGestures;
     }
   
@@ -15,7 +15,7 @@ export default class GestureEstimator {
   
       let gesturesFound = [];
   
-      // step 1: get estimations of curl / direction for each finger
+      // Paso 1: obtenemos el doblez y dirección de cada dedo
       const est = this.estimator.estimate(landmarks);
   
       let debugInfo = [];
@@ -27,7 +27,7 @@ export default class GestureEstimator {
         ]);
       }
   
-      // step 2: compare gesture description to each known gesture
+      // paso 2: Se compara el gesto con cada gesto conocido
       for(let gesture of this.gestures) {
         let confidence = gesture.matchAgainst(est.curls, est.directions);
         if(confidence >= minConfidence) {
