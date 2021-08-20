@@ -146,7 +146,7 @@ async function main() {
                 //resultado += gestureStrings[result.name];
 
                 if(pre == '👍'){
-                    decir(resultado);
+                    //decir(resultado);
                     escribir(resultado);
                     console.log(resultado);
                     resultado = '';
