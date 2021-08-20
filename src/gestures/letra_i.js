@@ -10,8 +10,8 @@ const letraIDescripction = new GestureDescription('letra_i');
 // Dedo meñique
 // - no curvado
 // - vertical arriba
-letraIDescripction.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1.0);
-letraIDescripction.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 1.0);
+letraIDescripction.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
+letraIDescripction.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 1);
 //letraIDescripction.addDirection(Finger.Pinky, FingerDirection.DiagonalUpLeft, 0.5);
 //letraIDescripction.addDirection(Finger.Pinky, FingerDirection.DiagonalUpRight, 0.5);
 
@@ -20,17 +20,19 @@ letraIDescripction.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 1.0);
 // - vertical arriba
 
 for(let finger of [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]){
-    letraIDescripction.addCurl(finger, FingerCurl.HalfCurl, 0.5);
-    letraIDescripction.addCurl(finger, FingerCurl.FullCurl, 0.5);
+    letraIDescripction.addCurl(finger, FingerCurl.HalfCurl, 1);
+    letraIDescripction.addCurl(finger, FingerCurl.FullCurl, 0.7);
     letraIDescripction.addDirection(finger, FingerDirection.VerticalUp, 1.0);
 }
 
 // Pulgar
 // - Puede o no tenenr curvatura
 // - Horizontal
-letraIDescripction.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 0.5);
+letraIDescripction.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1);
 letraIDescripction.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.5);
 letraIDescripction.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 1.0);
 letraIDescripction.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 1.0);
+letraIDescripction.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 0.5);
+letraIDescripction.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.5);
 
 export default letraIDescripction;

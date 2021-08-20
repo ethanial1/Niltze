@@ -17,11 +17,13 @@ letraPDescription.addDirection(Finger.Index, FingerDirection.HorizontalRight, 1)
 // Medio
 letraPDescription.addCurl(Finger.Middle, FingerCurl.NoCurl, 1);
 letraPDescription.addDirection(Finger.Middle, FingerDirection.VerticalUp, 1);
+letraPDescription.addDirection(Finger.Middle, FingerDirection.DiagonalUpLeft, 0.7);
+letraPDescription.addDirection(Finger.Middle, FingerDirection.DiagonalUpRight, 0.7);
 
 // restantes
 for (let finger of [Finger.Ring, Finger.Pinky]){
-    letraPDescription.addCurl(finger, FingerCurl.FullCurl, 1);
-    letraPDescription.addCurl(finger, FingerCurl.HalfCurl, 0.6);
+    letraPDescription.addCurl(finger, FingerCurl.FullCurl, 0.5);
+    letraPDescription.addCurl(finger, FingerCurl.HalfCurl, 1);
     letraPDescription.addDirection(finger, FingerDirection.VerticalUp);
 }
 

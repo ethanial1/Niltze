@@ -14,9 +14,11 @@ const letraODescription = new GestureDescription('letra_o');
 // - apunta de forma horizontal a la hizquierda o derecha
 // - puede estar en forma diagonal 
 
-letraODescription.addCurl(Finger.Thumb, FingerCurl.FullCurl, 1);
-letraODescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.50);
-letraODescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 0.50);
+letraODescription.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1);
+letraODescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 1);
+letraODescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 1);
+letraODescription.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 0.5);
+letraODescription.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 0.5);
 
 
 // Describimos los dedos (indice, el de enmedio, el dedo de anillo y el meñique)
@@ -25,10 +27,12 @@ letraODescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 0.5
 // - apuntasn hacia abajo
 
 for(let finger of [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    letraODescription.addCurl(finger, FingerCurl.FullCurl, 1);
-    letraODescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
-    letraODescription.addDirection(finger, FingerDirection.DiagonalUpRight, 0.25);
-    letraODescription.addDirection(finger, FingerDirection.DiagonalUpLeft, 0.25);
+    letraODescription.addCurl(finger, FingerCurl.HalfCurl, 1);
+    letraODescription.addCurl(finger, FingerCurl.FullCurl, 0.5);
+    letraODescription.addDirection(finger, FingerDirection.VerticalUp, 0.7);
+    letraODescription.addDirection(finger, FingerDirection.DiagonalUpRight, 0.9);
+    letraODescription.addDirection(finger, FingerDirection.DiagonalUpLeft, 0.9);
+
 }
 
 

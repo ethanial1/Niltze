@@ -15,7 +15,8 @@ for (let finger of [Finger.Index, Finger.Middle]){
 letraVDescription.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1);
 letraVDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 0.5);
 letraVDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 0.5);
-letraVDescription.addDirection(Finger.Thumb, FingerDirection.VerticalUp, 0.5);
+letraVDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 1);
+letraVDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight,1);
 
 // restantes
 for (let finger of [Finger.Ring, Finger.Pinky]){

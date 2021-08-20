@@ -11,10 +11,12 @@ for (let finger of [Finger.Index, Finger.Middle]){
 }
 
 // pulgar
-letraUDescription.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1);
+letraUDescription.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 0.5);
+letraUDescription.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1);
 letraUDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 0.5);
 letraUDescription.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 0.5);
-letraUDescription.addDirection(Finger.Thumb, FingerDirection.VerticalUp, 0.5);
+letraUDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 1);
+letraUDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 1);
 
 // restantes
 for (let finger of [Finger.Ring, Finger.Pinky]){

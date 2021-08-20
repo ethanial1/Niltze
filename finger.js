@@ -1,5 +1,10 @@
 import {Gestures} from './src/index.js';
+
+
+const txt = document.querySelector('#texto');
+
 var resultado = '';
+var pre = '';
 
 const config = {
     video : {width: 640, height: 480, fps: 30}
@@ -54,6 +59,9 @@ async function main() {
 
     // Mostrar el resultado
     const resultLayer = document.querySelector("#pose-result");
+
+    // Texto 
+    
 
     // Configurar la estimación de los gestos
     // añadimos nuestros gestos
@@ -124,11 +132,23 @@ async function main() {
                 let result = est.gestures.reduce((p, c) => {
                     return (p.confidence > c.confidence) ? p : c;
                 });
-
+                // Mostramos la letra al usuario
                 resultLayer.innerText = gestureStrings[result.name];
-                resultado += gestureStrings[result.name];
-                if(gestureStrings[result.name] == '👍'){
+                pre = gestureStrings[result.name];
+
+                if (pre != resultado.slice(-1)){
+                    if(pre == '👍'){
+                        result += '';
+                    }else{
+                        resultado += pre;
+                    }
+                }
+                //resultado += gestureStrings[result.name];
+
+                if(pre == '👍'){
                     decir(resultado);
+                    escribir(resultado);
+                    console.log(resultado);
                     resultado = '';
                 }
                 //console.log(gestureStrings[result.name]);
@@ -177,7 +197,18 @@ function drawPoint(ctx, x, y, r, color){
 
 // Funcion para decir la palabra formada por el usuario
 function decir(texto){
-    speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
+    const voices = window.speechSynthesis.getVoices();
+    const textoProvisto = new SpeechSynthesisUtterance(texto);
+    textoProvisto.voice = voices[15];
+    textoProvisto.lang = voices[15].lang;
+    window.speechSynthesis.speak(textoProvisto);    
+    
+    //speechSynthesis.speak(new SpeechSynthesisUtterance("Hola soy ethan"));
+}
+
+// Escribir en pantall el texto
+function escribir(texto){
+    txt.value += texto;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
